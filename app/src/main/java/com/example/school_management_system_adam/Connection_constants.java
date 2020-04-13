@@ -6,7 +6,9 @@ public class Connection_constants {
     //Make sure you change the url appropriately
     //Place the Android_ADAM folder inside htdocs for Xampp server
 
-    private static final String ROOT_URL = "http://172.17.0.1/Android_ADAM/v1/registerUser.php";
+    private static final String ROOT_URL = "http://172.17.0.1/Android_ADAM/v1/";
 
-    public static final String REGISTER_URL = "http://172.17.0.1/Android_ADAM/v1/userLogin.php";
+    public static final String REGISTER_URL = ROOT_URL + "registerUser.php";
+
+
 }

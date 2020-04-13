@@ -335,9 +335,10 @@
 
                     <ImageView
                         android:id="@+id/img_logout"
-                        android:src="@drawable/ic_logout"
                         android:layout_width="80dp"
-                        android:layout_height="80dp"/>
+                        android:layout_height="80dp"
+                        android:background="#FFFFFF"
+                        android:src="@drawable/ic_logout" />
 
                     <TextView
                         android:id="@+id/text_logout"

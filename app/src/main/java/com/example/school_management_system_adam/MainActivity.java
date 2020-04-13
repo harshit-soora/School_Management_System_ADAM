@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     private Button login;
     private Button cancel;
     private Button signup;
-    private TextView error;
 
 
     @Override
@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         login = (Button) findViewById(R.id.login_button);
         cancel = (Button) findViewById(R.id.cancel_button);
         signup = (Button) findViewById(R.id.signup_button);
-        error = (TextView) findViewById(R.id.error_dialogue);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,8 +69,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
-            //Show a error on same page
-            error.setText("Try Again...");
+            Toast.makeText(MainActivity.this, "Username/Password is incorrect", Toast.LENGTH_SHORT).show();
         }
     }
 
