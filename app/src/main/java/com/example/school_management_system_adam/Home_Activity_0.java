@@ -11,13 +11,20 @@ import android.widget.Toast;
 
 public class Home_Activity_0 extends AppCompatActivity {
 
-    ImageView img_class, img_subject, img_staffDetails, img_viewStaff, img_examDetails, img_viewExam, img_student, img_logout;
-    TextView  text_class, text_subject, text_staffDetails, text_viewStaff, text_examDetails, text_viewExam, text_student, text_logout;
+     private ImageView img_class, img_subject, img_staffDetails, img_viewStaff, img_examDetails, img_viewExam, img_student, img_logout;
+     private TextView  text_class, text_subject, text_staffDetails, text_viewStaff, text_examDetails, text_viewExam, text_student, text_logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home__0);
+
+        //If user is not logged
+        if(!SharedPrefManager.getInstance(this).isLoggedIn()) {
+            finish();
+            startActivity(new Intent(this, MainActivity.class));
+            return;
+        }
 
         img_class = (ImageView)findViewById(R.id.img_class);
         img_subject = (ImageView)findViewById(R.id.img_subject);
@@ -93,8 +100,7 @@ public class Home_Activity_0 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Home_Activity_0.this,"Logout",Toast.LENGTH_SHORT).show();
-                Intent homepage = new Intent(Home_Activity_0.this, MainActivity.class);
-                startActivity(homepage);
+                logout();
             }
         });
 
@@ -165,9 +171,15 @@ public class Home_Activity_0 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Home_Activity_0.this,"Class",Toast.LENGTH_SHORT).show();
-                Intent homepage = new Intent(Home_Activity_0.this, MainActivity.class);
-                startActivity(homepage);
+                logout();
             }
         });
+    }
+
+    public void logout(){
+        SharedPrefManager.getInstance(this).logout();
+        Intent intent = new Intent(Home_Activity_0.this, MainActivity.class);
+        finish();
+        startActivity(intent);
     }
 }

@@ -40,6 +40,13 @@ public class Signup_Activity_1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup__1);
 
+        //If user is already logged-in
+        if(SharedPrefManager.getInstance(this).isLoggedIn()) {
+            finish();
+            startActivity(new Intent(this, Home_Activity_0.class));
+            return;
+        }
+
         mTextUsername = (EditText)findViewById(R.id.edittext_username);
         mTextPassword = (EditText)findViewById(R.id.edittext_password);
         mTextEmail = (EditText)findViewById(R.id.editText_email);
@@ -52,6 +59,7 @@ public class Signup_Activity_1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent LoginIntent = new Intent(Signup_Activity_1.this, MainActivity.class);
+                finish();
                 startActivity(LoginIntent);
             }
         });
@@ -96,8 +104,15 @@ public class Signup_Activity_1 extends AppCompatActivity {
                         //There are two params error & message..send by server
                         Toast.makeText(getApplicationContext(), jsonObject.getString("message"), Toast.LENGTH_LONG).show();
 
-                        Intent moveToLogin = new Intent(Signup_Activity_1.this, MainActivity.class);
-                        startActivity(moveToLogin);
+                        String flag = jsonObject.getString("error");
+
+                        if("false".equals(flag))
+                        {
+                            //There is no error..move to login page
+                            Intent moveToLogin = new Intent(Signup_Activity_1.this, MainActivity.class);
+                            finish();
+                            startActivity(moveToLogin);
+                        }
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -125,10 +140,8 @@ public class Signup_Activity_1 extends AppCompatActivity {
             }
         };
 
-
         //Now we have to add this request to a request queue
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
 
     }
 }

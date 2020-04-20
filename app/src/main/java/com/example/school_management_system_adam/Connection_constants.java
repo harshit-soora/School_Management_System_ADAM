@@ -9,6 +9,6 @@ public class Connection_constants {
     private static final String ROOT_URL = "http://172.17.0.1/Android_ADAM/v1/";
 
     public static final String REGISTER_URL = ROOT_URL + "registerUser.php";
-
+    public static final String LOGIN_URL = ROOT_URL + "userLogin.php";
 
 }
