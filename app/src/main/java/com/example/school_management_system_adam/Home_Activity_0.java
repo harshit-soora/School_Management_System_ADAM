@@ -49,8 +49,8 @@ public class Home_Activity_0 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Home_Activity_0.this,"Class",Toast.LENGTH_SHORT).show();
-//                Intent homepage = new Intent(HomePage.this, MainActivity.class);
-//                startActivity(homepage);
+                Intent homepage = new Intent(Home_Activity_0.this, homeClass_Activity_2.class);
+                startActivity(homepage);
             }
         });
 
@@ -58,6 +58,8 @@ public class Home_Activity_0 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Home_Activity_0.this,"Subject",Toast.LENGTH_SHORT).show();
+                Intent subjectpage = new Intent(Home_Activity_0.this, addSubject_Activity_4.class);
+                startActivity(subjectpage);
             }
         });
 
@@ -104,12 +106,14 @@ public class Home_Activity_0 extends AppCompatActivity {
             }
         });
 
+
+
         text_class.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Home_Activity_0.this,"Class",Toast.LENGTH_SHORT).show();
-//                Intent homepage = new Intent(Home_Activity_0.this, MainActivity.class);
-//                startActivity(homepage);
+                Intent homepage = new Intent(Home_Activity_0.this, homeClass_Activity_2.class);
+                startActivity(homepage);
             }
         });
 
@@ -117,8 +121,8 @@ public class Home_Activity_0 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Home_Activity_0.this,"Class",Toast.LENGTH_SHORT).show();
-//                Intent homepage = new Intent(Home_Activity_0.this, MainActivity.class);
-//                startActivity(homepage);
+                Intent subjectpage = new Intent(Home_Activity_0.this, addSubject_Activity_4.class);
+                startActivity(subjectpage);
             }
         });
 
@@ -135,7 +139,7 @@ public class Home_Activity_0 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Home_Activity_0.this,"Class",Toast.LENGTH_SHORT).show();
-//                Intent homepage = new Intent(Home_Activity_0.this, MainActivity.class);
+//                Intent homepage = new Intent(Home_Activity_0.this, Staff_Activity_5.class);
 //                startActivity(homepage);
             }
         });

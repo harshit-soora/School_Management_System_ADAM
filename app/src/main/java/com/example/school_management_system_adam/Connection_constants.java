@@ -10,5 +10,6 @@ public class Connection_constants {
 
     public static final String REGISTER_URL = ROOT_URL + "registerUser.php";
     public static final String LOGIN_URL = ROOT_URL + "userLogin.php";
-
+    public static final String addCLASS_URL = ROOT_URL + "addClass.php";
+    public static final String addSUBJECT_URL = ROOT_URL + "addSubject.php";
 }

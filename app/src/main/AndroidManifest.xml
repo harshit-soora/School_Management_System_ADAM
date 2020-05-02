@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.school_management_system_adam">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Staff_Activity_5"></activity>
+        <activity android:name=".addSubject_Activity_4" />
+        <activity android:name=".homeClass_Activity_2" />
+        <activity android:name=".addClass_Activity_3" />
         <activity android:name=".Home_Activity_0" />
         <activity android:name=".Signup_Activity_1" />
         <activity android:name=".MainActivity">

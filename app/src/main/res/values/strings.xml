@@ -16,4 +16,13 @@
     <string name="Confirmpassword">Confirm Password</string>
     <string name="Email">Email</string>
     <string name="AlreadyRegistered">Already Registered</string>
+    <string name="classname">Classname</string>
+    <string name="section">Section</string>
+    <string name="delete_row">Delete Row</string>
+    <string name="subjectname">Subject Name</string>
+    <string name="subjectid">Subject ID</string>
+    <string name="staffname">Staff Name</string>
+    <string name="salary">Salary</string>
+    <string name="Qualification">Qualification</string>
+    <string name="subjectteacher">Subject Teacher</string>
 </resources>
