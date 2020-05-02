@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".Staff_Activity_5">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/id_subjectname"
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:hint="@string/staffname"
+        android:paddingLeft="60dp" />
+
+    <EditText
+        android:id="@+id/id-section"
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:hint="@string/salary"
+        android:paddingLeft="60dp" />
+
+    <EditText
+        android:id="@+id/qualification"
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:hint="@string/Qualification"
+        android:paddingLeft="60dp" />
+
+    <Button
+        android:id="@+id/btn_addClass"
+        android:layout_width="193dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAccent"
+        android:fadingEdge="vertical"
+        android:text="Add Staff" />
+
+    <EditText
+        android:id="@+id/row"
+        android:inputType="number"
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:hint="@string/delete_row"
+        android:paddingLeft="60dp"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="193dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAccent"
+        android:fadingEdge="vertical"
+        android:text="Remove Staff" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+        </TableLayout>
+    </ScrollView>
+
+
+</LinearLayout>
+
+
+</LinearLayout>

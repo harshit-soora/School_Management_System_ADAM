@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".addSubject_Activity_4">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/id_subjectname"
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:hint="@string/subjectname"
+        android:paddingLeft="60dp" />
+
+    <EditText
+        android:id="@+id/id_subjectTeacher"
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:hint="@string/subjectteacher"
+        android:paddingLeft="60dp" />
+
+    <Button
+        android:id="@+id/btn_addSubject"
+        android:layout_width="193dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAccent"
+        android:fadingEdge="vertical"
+        android:text="Add Subject" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="193dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAccent"
+        android:fadingEdge="vertical"
+        android:text="Remove Subject" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+        </TableLayout>
+    </ScrollView>
+
+
+</LinearLayout>
+
+
+</LinearLayout>
